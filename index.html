@@ -510,7 +510,12 @@
         <h2>Build your system</h2>
         <p class="sub">Tell us what is leaking in your process. We’ll review your inquiry and show you the cleanest next step.</p>
 
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGi0C0L89rENpQoIzVnlCUXKXjXE-tC93uiRXzrfLEHNxf9w/formResponse" method="POST">
+        <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLSeGi0C0L89rENpQoIzVnlCUXKXjXE-tC93uiRXzrfLEHNxf9w/formResponse"
+          method="POST"
+          target="hidden_iframe"
+          onsubmit="setTimeout(function(){ window.location.href = 'thank-you.html'; }, 900);"
+        >
           <label for="name">Name</label>
           <input id="name" name="entry.374717725" required placeholder="Your name" />
 
@@ -524,7 +529,7 @@
           <textarea id="service" name="entry.1965635184" required placeholder="Example: We miss inquiries, reply too slowly, or need a better follow-up system."></textarea>
 
           <button type="submit">Submit Inquiry</button>
-          <p class="form-note">Mobile-friendly submit. After submission, Google may show a confirmation screen.</p>
+          <p class="form-note">After submission, you’ll be redirected to a confirmation page.</p>
         </form>
       </aside>
     </main>
@@ -596,5 +601,6 @@
       </div>
     </footer>
   </div>
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
 </body>
 </html>
